@@ -3,27 +3,47 @@
 <head>
   <title> WEB - html</title>
   <meta charset="utf-8">
+  <style>
+    /*
+    inline level element
+    */
+    a {
+      color:black;
+      text-decoration: none;
+    }
+    /*
+    block level element
+    */
+    h1 {
+      border: 10px yellowgreen solid;
+      font-size: 60px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-  <h1><a href="index.html" target="_blank">WEB</a></h1>
+  <h1><a href="index.html" target="_blank" >WEB</a></h1>
+  <h2><목차></h2>
   <ol>
-    <li><a href="1.html" target="_blank">HTML</a></li>
-    <li><a href="2.html" target="_blank">CSS</a></li>
-    <li><a href="3.html" target="_blank">JavaScript</a></li>
+    <li><a href="1.html" target="_blank" style="color:red; text-decoration:underline"><strong>HTML</strong></a></li>
+    <li><a href="2.html" target="_blank" >CSS</a></li>
+    <li><a href="3.html" target="_blank" >JavaScript</a></li>
+    <li><a href="4.html" target="_blank" >MVC Web Framework</a></li>
+    <li><a href="5.html" target="_blank" >SPA Web Framework</a></li>
   </ol>
 
   <h2>HTML</h2>
   <h3>정의</h3>
   <p><strong>웹 페이지를 위한 지배적인 마크업 언어.</strong> HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라 링크, 인용과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을 제공한다. 그리고 이미지와 객체를 내장하고 대화형 양식을 생성하는 데 사용될 수 있다. HTML은 웹 페이지 콘텐츠 안의 꺾쇠 괄호에 둘러싸인 "태그"로 되어있는 HTML 요소 형태로 작성한다. HTML은 웹 브라우저와 같은 HTML 처리 장치의 행동에 영향을 주는 자바스크립트와 본문과 그 밖의 항목의 외관과 배치를 정의하는 CSS 같은 스크립트를 포함하거나 불러올 수 있다. HTML과 CSS 표준의 공동 책임자인 W3C는 명확하고 표상적인 마크업을 위하여 CSS의 사용을 권장한다.</p> <p><a href="https://www.w3.org/TR/html52/" target="_blank" title="html5.2 specification"><strong>Hypertext Markup Language (HTML)</strong></a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.</p>
-  <img src="coding.jpg" width="100%">
+  <img src="coding.jpg" width="70%">
   <h3>특징</h3>
   -html의 장점은 다른 언어에 비해 쉬우면서 중요하다는 점이다.<br>
   -html소스를 작성하기 위해서는 소스의 결과가 보여지는 <strong>웹브라우저</strong>와 고급언어로 소스를 작성할 수 있는 프로그램, 즉 <strong>에디터 프로그램</strong>이다.<br>
   -태그는 부모태그와 자식태그로 나뉘어진다. ex). ul태그와 li태그
   <h3>태그종류</h3>
   <ul>
-    <li><strong>a:</strong> hyperlink tag <br>ex). a href(hyper + reference)="link" <br>/ 새탭으로 열고싶을 경우 target="_blank"추가 <br>/ 해당 링크설명시 title="name"</li>
+    <li><strong>a:</strong> hyperlink tag <br>ex). a href(hyper + reference)="link" <br>/ 속성은 href와 target이 있다. 새탭으로 열고싶을 경우 target="_blank"추가 <br>/ 해당 링크설명시 title="name"</li>
     <li><strong>head:</strong> 본문을 설명하는 tag</li>
     <li><strong>body:</strong> 본문 tag</li>
     <li><strong>html:</strong> 최고위층 tag(head와 body태그를 묶음)</li>
@@ -38,8 +58,15 @@
     <li><strong>li:</strong> list tag</li>
     <li><strong>ul:</strong> unordered list tag <br>/ li태그의 부모태그</li>
     <li><strong>ol:</strong> ordered list tag</li>
+    <li><strong>div:</strong> block element tag</li>
+    <li><strong>span:</strong> inline element tag</li>
+    <li><strong>!--:</strong> ignored tag</li>
   </ul>
-  <h3>활용분야</h3>
+  <h3>CSS 관련태그</h3>
+  <ul>
+    <li><strong>id</strong>: HTML 태그 안에 작성하여 해당 id명. CSS로 id명 작성 시 앞에 #을 붙인다.</li>
+    <li><strong>class</strong>: HTML 태그 안에 작성하여 해당 클래스명으로 그룹을 묶을 수 있다. CSS로 class명 작성 시 앞에 .을 붙인다.</li>
+    <li>(추가적으로 태그 안에 작성하는 속성에는 여러 value를 할당할 수 있고, 이는 띄어쓰기로 구분된다. 그래서 ex). class="saw active"라고 하면 해당 태그는 saw와 active 클래스 모두에 속해있다. 그리고 작성순서에 따라 영향을 받기 때문에 해당 태그는 saw 클래스가 먼저 작성되면 active, active 클래스가 먼저 작성되면 saw 클래스의 영향을 받는다.)
   <h3>기타</h3>
 </body>
 </html>
