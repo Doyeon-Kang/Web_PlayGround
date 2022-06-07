@@ -1,0 +1,28 @@
+/*login.jsp*/
+body {
+    background-image: url(./img/카페2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content-wrap {
+    width: 500px;
+    height: 500px;
+    margin: 300px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+h1 {
+    padding-right: 80px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+form > input {
+    margin: 10px;
+}
+
+/*join.jsp*/

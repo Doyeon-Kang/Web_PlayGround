@@ -1,0 +1,174 @@
+:root {
+--color-white: #ffffff;
+--color-light-gray: rgb(233, 233, 233);
+--color-gray: #d2d2cf;
+--color-beige: #FFFBE9;
+--color-cream: #E3CAA5;
+--color-mocha: #CEAB93;
+--color-coffee: #AD8B73;
+--color-black: #4c4c4c;
+}
+/*-- Common Selector --*/
+* {
+    color: var(--color-black);
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: "맑은 고딕", serif;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+}
+ul {
+    list-style: none;
+}
+
+li {
+    width: 100%;
+    height: 250px;
+}
+input[type="text"] {
+    width: 350px;
+    height: 52px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 30px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 120px;
+    height: 52px;
+    font-size: 15px;
+    border-radius: 80px;
+    border: none;
+    float: right;
+    background-color: var(--color-cream);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+/*-- Navbar --*/
+#navbar {
+    background-color: transparent;
+    display: flex;
+    top: 0px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 16px;
+    justify-content: space-between;
+}
+
+#navbar.navbar--dark {
+    background-color: var(--color-mocha);
+    transition: all var(--animation-duration) ease-in-out;
+}
+.navbar__logo a{
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+.navbar__profile,
+.navbar__profile a{
+    margin-right: 36px;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
+
+/*-- Home --*/
+#home {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -4px black;
+}
+.home__container {
+    display: flex;
+    justify-content: center
+}
+.home__container img {
+    width: 100%;
+}
+.search__bar {
+    width: 500px;
+    height: 52px;
+    font-size: 15px;
+    border: 3px solid var(--color-cream);
+    border-radius: 28px;
+    outline: none;
+    background-color: var(--color-white);
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+/*-- Content --*/
+.section__container {
+    height: 1500px;
+    padding: 0 15%;
+}
+
+.cafe {
+    box-shadow: 10px 5px 20px gainsboro;
+    overflow: hidden;
+    padding: 20px;
+    cursor: pointer;
+}
+.cafe a img {
+    width: 30%;
+    height: 250px;
+    float: left;
+    margin-right: 20px;
+}
+
+.cafe .text__box {
+    width: 55%;
+    height: 230px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+} 
+.cafe .title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.cafe .description {
+}
+
+.arrow-up {
+  position: fixed;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-mocha);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+
+.arrow-up.visible {
+  pointer-events: auto;
+  opacity: 1;
+}
