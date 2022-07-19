@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
 import About from './About'
+import Movie from './Movie'
 
 export default createRouter({
     // Hash mode 사용 | History mode는 서버에 따로 세팅을 해야 함
@@ -16,6 +17,10 @@ export default createRouter({
         {
             path: '/about',
             component: About
+        },
+        {
+            path: '/movie',
+            component: Movie
         }
     ]
 })
