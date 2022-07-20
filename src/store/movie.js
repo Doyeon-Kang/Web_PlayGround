@@ -1,21 +1,26 @@
+import axios from 'axios'
+
 export default {
     // module
     namespaced: true,
     // data
     state: () => {
         return {
-            movies: []
+            movies: [],
+            message: '',
+            loading: false
         }
     },
     // computed
-    getters: {
-        movieIds(state) {
-            return state.movies.map(m => m.imdbID)
-        }
-    },
+    getters: {},
     // methods
     // 변이 - 데이터 변경가능 
     mutations: {
+        updateState(state, payload) {
+            Object.keys(payload).forEach(key => {
+                state[key] = payload[key]
+            })
+        },
         resetMovies(state) {
             state.movies = []
         }
@@ -23,8 +28,15 @@ export default {
     // 변이불가 - 데이터 변경하지 않는 메소드
     // 비동기 처리
     actions: {
-        searchMovies({ state, commit}) {
-            
+        async searchMovies({ commit }, payload) {
+            const { title, type, number, year } = payload
+            const OMDB_API_KEY = '7035c60c'
+
+            const res = await axios.get(`https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${title}&type=${type}&y=${year}&page=1`)
+            const { Search, totalResults } = res.data
+            commit('updateState', {
+                movies: Search
+            })
         }
     }
 }
