@@ -1,5 +1,8 @@
 # movie-search
 
+## Description
+: 영화 검색 사이트 실습 프로젝트
+
 ## Project setup
 ```
 npm install
@@ -19,6 +22,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
