@@ -1,6 +1,9 @@
 <template>
     <div class="container">
         <div class="inner">
+            <div class="message">
+                {{ message }}
+            </div>
             <MovieItem v-for="movie in movies" :key="movie.imdbID" :movie="movie" />
         </div>
     </div>
@@ -16,6 +19,9 @@ export default {
     computed: {
         movies() {
             return this.$store.state.movie.movies // 영화 정보 객체 배열 데이터
+        },
+        message() {
+            return this.$store.state.movie.message
         }
     }
 }
