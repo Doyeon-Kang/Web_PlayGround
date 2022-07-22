@@ -15,7 +15,7 @@ export default {
     },
     computed: {
         movies() {
-            return this.$store.state.movie.movies
+            return this.$store.state.movie.movies // 영화 정보 객체 배열 데이터
         }
     }
 }
