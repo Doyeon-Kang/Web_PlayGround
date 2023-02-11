@@ -362,3 +362,15 @@ p {
     background-color:  var(--color-dark-white);
 }
 
+/* Contact */
+#contact {
+    background-color: var(--color-pink);
+}
+
+.contact__title, .contact__email, .contact__rights {
+    color: var(--color-white)
+}
+
+.contact__title {
+    margin: 32px 0;
+}
