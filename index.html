@@ -7,6 +7,7 @@
     <title>Dobby's Portfolio</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/31b515d57a.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -15,18 +16,18 @@
             <a href="#">Dobby</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item">Home</li>
-            <li class="navbar__menu__item">About</li>
-            <li class="navbar__menu__item">Skills</li>
-            <li class="navbar__menu__item">My work</li>
-            <li class="navbar__menu__item">Contact</li>
+            <li class="navbar__menu__item" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#work">My work</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
     </nav>
 
     <!-- Home -->
     <section id="home">
         <div class="home__container">
-            <img src="./imgs/증명사진.jpg" alt="" class="home__avatar">
+            <img src="./imgs/증명사진.jpg" alt="" class="home__avatar">
             <h1 class="home__title">Hello, I'm Dobby</h1>
             <h2 class="home__description">A Software Engineer and Designer</h2>
             <button class="home__contact">Contact me</button>
@@ -180,67 +181,67 @@
             <h1>My work</h1>
             <h3>Projects</h2>
             <div class="work__categories">
-                <button class="category__btn active">
+                <button class="category__btn active" data-filter="*">
                     All <span class="category__count">8</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="design">
                     Design <span class="category__count">4</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="web">
                     Web <span class="category__count">4</span>
                 </button>
             </div>
             <div class="work__projects">
-                <a href="" class="project">
+                <a href="" class="project" data-type="design">
                     <img src="./imgs/youtube.png" alt="프로젝트 이미지">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
                         <span>Clone coding with HTML, CSS</span>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" data-type="design">
                     <img src="./imgs/youtube.png" alt="프로젝트 이미지">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
                         <span>Clone coding with HTML, CSS</span>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" data-type="design">
                     <img src="./imgs/youtube.png" alt="프로젝트 이미지">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
                         <span>Clone coding with HTML, CSS</span>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" data-type="design">
                     <img src="./imgs/youtube.png" alt="프로젝트 이미지">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
                         <span>Clone coding with HTML, CSS</span>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" data-type="web">
                     <img src="./imgs/youtube.png" alt="프로젝트 이미지">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
                         <span>Clone coding with HTML, CSS</span>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" data-type="web">
                     <img src="./imgs/youtube.png" alt="프로젝트 이미지">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
                         <span>Clone coding with HTML, CSS</span>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" data-type="web">
                     <img src="./imgs/youtube.png" alt="프로젝트 이미지">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
                         <span>Clone coding with HTML, CSS</span>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" data-type="web">
                     <img src="./imgs/youtube.png" alt="프로젝트 이미지">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
