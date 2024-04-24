@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <title> WEB - CSS </title>
+  <meta charset="utf-8">
+  <style>
+    a {
+      color:black;
+      text-decoration: none;
+    }
+    #grid {
+      border-top: 1.5px solid black;
+      display: grid;
+      margin: 0;
+      grid-template-columns: 150px 1fr;
+    }
+    #rline {
+      border-right: 1.5px solid black;
+      margin:0;
+      padding-right: 60px;
+    }
+    #lpadding {
+      padding-left: 20px;
+    }
+    .saw {
+      color: gray;
+    }
+    .small {
+      font-size: 14px;
+    }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 35%
+    }
+    h1 {
+      background-color: DarkSalmon;
+      font-size: 60px;
+      text-align: center;
+      margin:0;
+      padding:20px;
+    }
+    ol {
+      font-size: 20px;
+      padding-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="index.html" target="_blank">WEB</a></h1>
+
+  <div id="grid">
+    <div id="rline" style="background-color:beige">
+      <ol>
+        <li><a href="1.html" target="_blank" class="saw">HTML</a></li>
+        <li><a href="2.html" target="_blank" style="color:red; text-decoration:underline"><strong>CSS</strong></a></li>
+        <li><a href="3.html" target="_blank" class="saw">JavaScript</a></li>
+        <li><a href="4.html" target="_blank" class="saw">MVC</a></li>
+        <li><a href="5.html" target="_blank" class="saw">SPA</a></li>
+      </ol>
+    </div>
+    <div id="lpadding">
+      <h2>CSS</h2>
+      <h3>정의</h3>
+      <p>HTML 등의 마크업 언어로 작성된 문서가 실제로 웹사이트에 표현되는 방법을 정해주는 언어.</p>
+      <p>CSS의 C가 Cascading의 약자인데, 이는 상위 요소의 스타일 속성을 자손 요소들에게 상속시켜주는 모습이 DOM 트리구조에서 마치 폭포수처럼 내려가는 모습을 닮았기 때문이다.</p>
+      <h3>특징</h3>
+      <p>처음 만들어졌을 때, 웹 브라우저는 HTML이라는 언어만을 해석해서 처리하는 프로그램이었기 때문에 웹 브아루저는 기본적으로 CSS를 HTML로 인식한다. 하지만 CSS는 HTML과 완전히 다른 언어이기 때문에 style 태그를 사용하여 CSS의 사용범위를 지정해줘야 한다. 그리고 style 태그 안에서 어떤 부분에 스타일을 입힐 것인지 지정해주는 코드를 '선택자'라고 한다.</p>
+      <p>style 태그뿐만 아니라 HTML 소스안에 style 속성을 사용해서 직접 삽입할 수 있다.(여기서 직접 삽입하는 style은 HTML의 속성이다.)</p>
+      <p>결론적으로 HTML 소스안에 CSS를 작성하는 방법은 두 가지이다. <strong>첫 번째는 style 태그와 선택자를 사용해서 작성하는 것이고, 두 번째는 HTML의 style 속성을 사용하여 직접 작성하는 것이다.</strong></p>
+      <h4 style="color:blue; margin: 10px";>선택자 종류</h4>
+      <ul>
+        <li class="small"><strong>tag 선택자</strong> - 해당 tag name에 속해있는 내용들을 선택. ex). tag name{}</li>
+        <li class="small"><strong>id 선택자</strong> - id 태그에 속해있는 내용 중 name과 같은 내용들을 선택.(id 태그는 id 선택자 1개 당 1개의 value만을 가진다.) #name{}</li>
+        <li class="small"><strong>class 선택자</strong> - class선택자, class 태그에 속해있는 내용 중 name과 같은 내용들을 선택.(class 태그는 class 선택자 1개가 다수의 value를 가질 수 있다.) .name{}</li>
+        <li style="text-decoration:underline">선택자 우선순위: id > class > tag / 선택범위가 구체적일수록 우선순위가 높다.</li>
+        <li class="small"><strong>,(콤마)선택자</strong> - 콤마 선택자, 어떤 선택자들의 중괄호 내 내용이 같다면 콤마 선택자를 이용해서 코드 양을 줄일 수 있다. ex). h1, a{} </li>
+      </ul>
+      <h3>효과 종류</h3>
+      <ul>
+        <li>color: 폰트 색깔변경</li>
+        <li>text-decoration: 폰트의 효과를 만들거나 없앨 수 있는 속성(none을 붙일경우 효과가 사라진다.)</li>
+        <li>font-size: 폰트의 크기를 조절하는 속성</li>
+        <li>text-align: 텍스트 정렬 조정하는 속성</li>
+        <li>border: 테두리 관련 속성</li>
+        <li>padding: content와 테두리 사이 관련 속성</li>
+        <li>margin: 바깥 여백, 테두리와 테두리 사이 관련 속성</li>
+        <li>display: 화면 전체를 쓰는 태그는 block, 자신의 부피만큼의 크기를 가지는 태그는 inline을 작성한다.
+      </ul><br>
+        <img src="boxmodel.gif" class="center">
+        <div class="center" style="font-size:10px"><참고> - CSS box model</div>
+
+      <h3>활용분야</h3>
+      <h3>기타</h3>
+    </div>
+  </div>
+</body>
+</html>
